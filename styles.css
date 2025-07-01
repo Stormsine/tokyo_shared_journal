@@ -111,7 +111,7 @@ label {
   font-weight: bold;
 }
 
-.canva-embed-section, .wanderlog-section {
+.canva-embed-section {
   max-width: 900px;
   margin: 40px auto;
   background: white;
@@ -126,4 +126,27 @@ label {
 iframe {
   width: 100%;
   border-radius: 12px;
+}
+
+.wanderlog-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  height: calc(100vh - 100px); /* or adjust based on header + margin */
+}
+
+.wanderlog-section iframe {
+  flex-grow: 1;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  height: auto; /* Let flex-grow determine height */
 }

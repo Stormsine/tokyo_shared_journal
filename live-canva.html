@@ -3,22 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Live Canva Feed</title>
+  <title>Tokyo Shared Live Canva 💖</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+
+  <!-- Fixed nav with buttons -->
+  <header class="nav-header">
     <button class="menu-btn" onclick="location.href='index.html'">
       <div class="menu-icon">
         <span></span><span></span><span></span>
       </div>
-      Home
+      Journal
+    </button>
+    <button class="menu-btn" onclick="location.href='live-canva.html'">
+      <div class="menu-icon">
+        <span></span><span></span><span></span>
+      </div>
+      Live Canva
     </button>
   </header>
 
-  <main style="width: 100%; height: 80vh; display: flex; justify-content: center; align-items: center;">
-    <!-- Replace with your actual live Canva embed iframe or URL -->
-    <iframe src="YOUR_CANVA_LIVE_FEED_URL_HERE" width="80%" height="100%" frameborder="0" allowfullscreen></iframe>
+  <!-- Background slideshow -->
+  <div id="bg-slideshow"></div>
+
+  <main class="container" style="text-align:center;">
+    <h1>🗾 Our Live Tokyo Itinerary (Canva)</h1>
+    <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px #ccc; margin-top: 20px;">
+      <iframe
+        loading="lazy"
+        src="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view?embed"
+        allowfullscreen
+        allow="fullscreen"
+        title="Live Tokyo Itinerary Canva Design"
+        style="width: 100%; height: 80vh; border: none;"
+      ></iframe>
+    </div>
+    <p style="margin-top: 16px;">
+      <a href="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view" target="_blank" rel="noopener" style="color:#333; font-weight:bold;">
+        Open Full Canva Itinerary
+      </a>
+    </p>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
