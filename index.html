@@ -7,6 +7,23 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Fixed header with navigation buttons -->
+  <header class="nav-header">
+    <button class="menu-btn" onclick="location.href='wander-log.html'">
+      <div class="menu-icon">
+        <span></span><span></span><span></span>
+      </div>
+      Wander Log
+    </button>
+
+    <button class="menu-btn" onclick="location.href='canva-feed.html'">
+      <div class="menu-icon">
+        <span></span><span></span><span></span>
+      </div>
+      Live Canva Feed
+    </button>
+  </header>
+
   <!-- Background slideshow -->
   <div id="bg-slideshow"></div>
 
@@ -33,39 +50,6 @@
 
     <div id="entries"></div>
   </div>
-
-  <!-- Canva Embed -->
-  <section class="canva-embed-section">
-    <h2>🗾 Our Live Tokyo Itinerary (Canva)</h2>
-    <div class="canva-embed-wrapper">
-      <iframe
-        loading="lazy"
-        src="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view?embed"
-        allowfullscreen
-        allow="fullscreen"
-        title="Live Tokyo Itinerary Canva Design"
-      ></iframe>
-    </div>
-    <a
-      href="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view"
-      target="_blank"
-      rel="noopener"
-    >Open Full Canva Itinerary</a>
-  </section>
-
-  <!-- Wanderlog Embed -->
-  <section class="wanderlog-section">
-    <h2>🌏 Full Wanderlog Itinerary</h2>
-    <div class="wanderlog-embed-wrapper">
-      <iframe
-        src="https://wanderlog.com/view/zfctyioozn/trip-to-japan/shared"
-        width="100%"
-        height="800"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </section>
 
   <!-- Supabase & your script -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>

@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Comic Sans MS', cursive, sans-serif;
   background: #fdf6f0;
@@ -6,7 +7,53 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+body {
+  padding-top: 60px; /* space for fixed header */
+}
 
+.nav-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+button.menu-btn {
+  background: rgba(255 255 255 / 0.15);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button.menu-btn:hover {
+  background: rgba(255 255 255 / 0.35);
+}
+
+.menu-icon {
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
 #bg-slideshow {
   position: fixed;
   z-index: -1;
