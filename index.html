@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tokyo Shared Journal 💖</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background slideshow -->
+  <div id="bg-slideshow"></div>
+
+  <!-- Journal UI -->
+  <div class="container">
+    <h1>📜 Our Tokyo Trip Journal</h1>
+    <select id="day-select"></select>
+    <div id="day-header"></div>
+
+    <div id="journal-form">
+      <input type="file" id="photo" accept="image/*" />
+      <textarea id="note" placeholder="Write a memory..."></textarea>
+      <label>Rating: <input type="range" id="rating" min="1" max="5" value="3" /></label>
+      <label>Emoji Mood:
+        <select id="emoji">
+          <option>😊</option>
+          <option>🥰</option>
+          <option>😋</option>
+          <option>🤯</option>
+        </select>
+      </label>
+      <button onclick="saveEntry()">Save Entry</button>
+    </div>
+
+    <div id="entries"></div>
+  </div>
+
+  <!-- Canva Embed -->
+  <section class="canva-embed-section">
+    <h2>🗾 Our Live Tokyo Itinerary (Canva)</h2>
+    <div class="canva-embed-wrapper">
+      <iframe
+        loading="lazy"
+        src="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view?embed"
+        allowfullscreen
+        allow="fullscreen"
+        title="Live Tokyo Itinerary Canva Design"
+      ></iframe>
+    </div>
+    <a
+      href="https://www.canva.com/design/DAGr2wOmfKY/VfWxI8cmjbhcXGdZ_GpQ4g/view"
+      target="_blank"
+      rel="noopener"
+    >Open Full Canva Itinerary</a>
+  </section>
+
+  <!-- Wanderlog Embed -->
+  <section class="wanderlog-section">
+    <h2>🌏 Full Wanderlog Itinerary</h2>
+    <div class="wanderlog-embed-wrapper">
+      <iframe
+        src="https://wanderlog.com/view/zfctyioozn/trip-to-japan/shared"
+        width="100%"
+        height="800"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Supabase & your script -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

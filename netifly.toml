@@ -1,0 +1,4 @@
+[dev]
+  publish = "public"       # or "./" or "./dist" — wherever your index.html is
+  port = 8888
+  functions = "netlify/functions"
