@@ -170,3 +170,26 @@ window.onload = () => {
 };
 
 window.saveEntry = saveEntry;
+const hamburgerMenu = document.getElementById('hamburgerMenu');
+const menuDropdown = document.getElementById('menuDropdown');
+
+function toggleMenu() {
+  const isShown = menuDropdown.classList.toggle('show');
+  menuDropdown.setAttribute('aria-hidden', !isShown);
+}
+
+hamburgerMenu.addEventListener('click', toggleMenu);
+hamburgerMenu.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    toggleMenu();
+  }
+});
+
+// Optional: close menu if clicking outside
+document.addEventListener('click', (e) => {
+  if (!hamburgerMenu.contains(e.target) && !menuDropdown.contains(e.target)) {
+    menuDropdown.classList.remove('show');
+    menuDropdown.setAttribute('aria-hidden', 'true');
+  }
+});

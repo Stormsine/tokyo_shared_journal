@@ -11,49 +11,68 @@ body {
   padding-top: 60px; /* space for fixed header */
 }
 
-.nav-header {
+/* Hamburger button fixed top-left */
+.hamburger-menu {
   position: fixed;
-  top: 0; left: 0; right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
+  top: 15px;
+  left: 15px;
   z-index: 1000;
-}
-
-button.menu-btn {
-  background: rgba(255 255 255 / 0.15);
-  border: none;
-  border-radius: 8px;
-  padding: 12px 18px;
-  color: #fff;
-  font-size: 1.1rem;
+  width: 36px;
+  height: 30px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: background-color 0.3s ease;
-}
-
-button.menu-btn:hover {
-  background: rgba(255 255 255 / 0.35);
-}
-
-.menu-icon {
-  width: 22px;
-  height: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.menu-icon span {
+/* Hamburger bars */
+.hamburger-menu span {
   display: block;
-  height: 3px;
-  background-color: white;
+  height: 4px;
+  background-color: #333;
   border-radius: 2px;
+  transition: 0.3s ease;
 }
+
+/* Dropdown menu container */
+.menu-dropdown {
+  position: fixed;
+  top: 60px; /* below hamburger */
+  left: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  width: 160px;
+  display: none;
+  flex-direction: column;
+  z-index: 999;
+}
+
+/* Show menu */
+.menu-dropdown.show {
+  display: flex;
+}
+
+/* Menu link style */
+.menu-dropdown a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.menu-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.menu-dropdown a:hover {
+  background-color: #f0e7dd;
+  color: #000;
+}
+
 #bg-slideshow {
   position: fixed;
   z-index: -1;
@@ -73,13 +92,15 @@ button.menu-btn:hover {
 .container {
   max-width: 700px;
   margin: auto;
-  background: white;
+  background: url('cherry.gif') no-repeat center center;
+  background-size: cover;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px #ccc;
   margin-top: 40px;
   position: relative;
   z-index: 2;
+  color: #333;
 }
 
 textarea {

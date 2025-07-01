@@ -7,22 +7,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Hamburger menu button -->
+  <div class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-  <!-- Fixed nav with buttons -->
-  <header class="nav-header">
-    <button class="menu-btn" onclick="location.href='index.html'">
-      <div class="menu-icon">
-        <span></span><span></span><span></span>
-      </div>
-      Journal
-    </button>
-    <button class="menu-btn" onclick="location.href='live-canva.html'">
-      <div class="menu-icon">
-        <span></span><span></span><span></span>
-      </div>
-      Live Canva
-    </button>
-  </header>
+  <!-- Dropdown menu -->
+  <nav class="menu-dropdown" id="menuDropdown" aria-hidden="true">
+    <a href="wanderlog.html">🌏 Wanderlog</a>
+    <a href="live-canva.html">🎨 Live Canva Feed</a>
+    <a href="index.html">Home</a>
+  </nav>
 
   <!-- Background slideshow -->
   <div id="bg-slideshow"></div>

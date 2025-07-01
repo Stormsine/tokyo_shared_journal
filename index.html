@@ -7,22 +7,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Fixed header with navigation buttons -->
-  <header class="nav-header">
-    <button class="menu-btn" onclick="location.href='wanderlog.html'">
-      <div class="menu-icon">
-        <span></span><span></span><span></span>
-      </div>
-      Wander Log
-    </button>
+  <!-- Hamburger menu button -->
+  <div class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu" role="button" tabindex="0">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <button class="menu-btn" onclick="location.href='live-canva.html'">
-      <div class="menu-icon">
-        <span></span><span></span><span></span>
-      </div>
-      Live Canva Feed
-    </button>
-  </header>
+  <!-- Dropdown menu -->
+  <nav class="menu-dropdown" id="menuDropdown" aria-hidden="true">
+    <a href="wanderlog.html">🌏 Wanderlog</a>
+    <a href="live-canva.html">🎨 Live Canva Feed</a>
+  </nav>
 
   <!-- Background slideshow -->
   <div id="bg-slideshow"></div>
